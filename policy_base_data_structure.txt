@@ -140,7 +140,7 @@ int main() {
 }
 
 
-example of using map :        #include <bits/stdc++.h>
+example of using pair :        #include <bits/stdc++.h>
                               #include <ext/pb_ds/assoc_container.hpp>
                               #include <ext/pb_ds/tree_policy.hpp>
                               using namespace std;
