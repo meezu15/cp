@@ -1,0 +1,19 @@
+    vector<int> spf(LIM + 1);
+    vector<int> primes;
+
+    for (int i = 2; i <= LIM; i++) {
+        if (!spf[i]) {
+            spf[i] = i;
+            primes.push_back(i);
+        }
+
+        for (int p : primes) {
+            long long x = 1LL * p * i;
+            if (x > LIM) break;
+
+            spf[x] = p;
+
+            if (p == spf[i]) break;
+        }
+    }
+
