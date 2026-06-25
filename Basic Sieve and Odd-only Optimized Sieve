@@ -1,0 +1,33 @@
+The Sieve of Eratosthenes has time complexity:
+
+                  O(nloglogn)
+                  Basic Sieve      : 2.0 seconds
+                  Odd-only Sieve   : 1.0 second
+But the basic one loop is about 100 times slower.
+
+Big-O says:
+
+O(n) == O(100n)
+
+because it ignores constants.
+
+Basic Sieve:::
+
+        for(int i=2;i*i<=n;i++){
+            if(p[i]){
+              for(int j=i*i;j<=n;j+=i)
+                 p[j]=false;
+           }
+       }
+
+Optimized Odd-Only Sieve:
+
+
+        for(int i=4;i<=m;i+=2) p[i]=false;
+
+        for(int i=3;i*i<=m;i+=2){
+            if(p[i]){
+              for(int j=i*i;j<=m;j+=2*i)
+                 p[j]=false;
+               }
+        }
