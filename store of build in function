@@ -1,0 +1,23 @@
+1) sto*() functions:::(o(n));
+
+Function	  Converts	              Return        Example
+stoi()	    string → int	          int	          int x = stoi("123");
+stol()	    string → long 	        long        	long x = stol("123456");
+stoll()	    string → long long	    long long	    long long x = stoll("123456789");
+stof()	    string → float	        float        	float x = stof("3.14");
+stod()	    string → double	        double      	double x = stod("3.14159");
+stold()	    string → long double	  long double	  long double x = stold("3.14159");
+
+2) next_permutation() — (o(n))::
+
+Generates the next lexicographically larger permutation of a sequence (string, array, vector, etc.).
+If the sequence is sorted first, next_permutation() generates each distinct permutation exactly once.
+
+
+string s = "112";
+
+sort(s.begin(), s.end());
+
+do {
+    cout << s << '\n';
+} while(next_permutation(s.begin(), s.end()));
